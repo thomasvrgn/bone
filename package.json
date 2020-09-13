@@ -4,5 +4,11 @@
   "description": "🦴 Bone programming language",
   "main": "index.js",
   "author": "NessMC <contact@nessmc.fr>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@types/chai": "^4.2.12",
+    "chai": "^4.2.0",
+    "mocha": "^8.1.3",
+    "ts-mocha": "^7.0.0"
+  }
 }
