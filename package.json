@@ -1,0 +1,8 @@
+{
+  "name": "bone",
+  "version": "0.0.1",
+  "description": "🦴 Bone programming language",
+  "main": "index.js",
+  "author": "NessMC <contact@nessmc.fr>",
+  "license": "MIT"
+}
