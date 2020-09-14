@@ -15,7 +15,7 @@
     "lint": "./node_modules/.bin/eslint . --ext .ts --fix",
     "bundle": "./node_modules/.bin/webpack-cli",
     "docker:build": "docker-compose build",
-    "docker:start": "docker run quark-lang_app"
+    "docker:start": "docker run bone_app"
   },
   "dependencies": {
     "@types/chai": "^4.2.12",
