@@ -1,0 +1,35 @@
+!def {
+  AUTHOR = "Ness MC"
+}
+
+head {
+  title {!AUTHOR}
+  link [href="css/style.css", rel="stylesheet"]
+}
+
+body {
+  h1 [id="top"] {"Welcome to " + !AUTHOR + "'s webpage!"}
+  div [class="menu"] {
+    h2 {"Menu"}
+    ul {
+      li {
+        a [href="about.html"] {"Learn more about " + !AUTHOR} // single line comment
+      }
+      li {
+        a [href="contact.html"] {"Get in contact with " + !AUTHOR}
+      }
+      li {
+        a [href="#top"] {"Return to top"}
+      }
+    }
+  }
+  /*
+    multi
+      line
+        comment
+  */
+  script [src="js/script.js"] {}
+  button [type="button", onClick="fireConfetti()"] {
+    "Click here for a surprise!"
+  }
+}
