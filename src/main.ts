@@ -1,6 +1,7 @@
-import Scanner from 'core/scanner';
+import Parser from "core/parser";
 
-const scanner = new Scanner(`test{
+const parsed = new Parser(`test{
   bruh
 }`);
-console.log(scanner.buildAST());
+
+console.log(parsed.parse());
