@@ -23,11 +23,6 @@ body {
       }
     }
   }
-  /*
-    multi
-      line
-        comment
-  */
   script [src="js/script.js"] {}
   button [type="button", onClick="fireConfetti()"] {
     "Click here for a surprise!"

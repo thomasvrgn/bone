@@ -1,7 +1,10 @@
-import Parser from "core/parser";
+import Parser from 'core/parser';
+import File from 'utils/file';
 
-const parsed = new Parser(`test{
-  bruh
-}`);
+async function main() {
+  const content: string = await new File('./sample/index.bone').read();
+  const parsed = new Parser(content);
+  console.log(JSON.stringify(parsed.parse(), null, 2))
+}
 
-console.log(parsed.parse());
+main();
