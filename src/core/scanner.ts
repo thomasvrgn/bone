@@ -1,7 +1,11 @@
+import { Node } from 'interfaces/node';
+
 export default class Scanner {
   private code: string;
 
-  protected ast: any;
+  protected ast: Node = {
+    children: [],
+  };
 
   constructor(code: string) {
     this.code = code
@@ -10,11 +14,11 @@ export default class Scanner {
       .join('');
   }
 
-  private writeObject(parents: Array<string>, property: string, value: string | null = null) {
-    if (parents.length === 0) return;
-    let tmpAst: object = this.ast;
+  private writeObject(parents: string[], property: string, value: string | null = null): any {
+    if (parents.length === 0) return null;
+    let tmpAst: Node = this.ast;
     parents.map((parent: string, index: number) => {
-      if (index + 1 === parents.length) {
+      if (Number(index) + 1 === parents.length) {
         return tmpAst.children.push({
           type: property.split(/:/)[0],
           value,
@@ -23,14 +27,16 @@ export default class Scanner {
           children: [],
         });
       }
-      tmpAst = tmpAst.children.filter((x) => x.id === parseInt(parent.split(/:/)[1], 10));
-      return tmpAst;
+      tmpAst = tmpAst.children.filter((x) => x.id === parseInt(parent.split(/:/)[1], 10))[0];
+      return true;
     });
+    this.ast = tmpAst;
+    return null;
   }
 
   public buildAST() {
     let current: string = '';
-    let parents: Array<string> = [];
+    let parents: string[] = [];
     let depth: number = 0;
 
     [...this.code].map((char, index) => {
@@ -51,5 +57,6 @@ export default class Scanner {
       }
       return true;
     });
+    return this.ast;
   }
 }

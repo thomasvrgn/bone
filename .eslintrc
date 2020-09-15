@@ -10,6 +10,9 @@
   "rules": {
     "eol-last": "off",
     "spaced-comment": "off",
-    "linebreak-style": "off"
+    "linebreak-style": "off",
+    "rules": {
+      "prefer-destructuring": ["error", {"object": true, "array": false}]
+    }
   }
 }
