@@ -1,0 +1,201 @@
+{
+  "children": [
+    {
+      "type": "!def",
+      "value": null,
+      "id": 5,
+      "depth": 1,
+      "children": [
+        {
+          "type": "#text",
+          "value": "AUTHOR = \"Ness MC\"",
+          "id": 24,
+          "depth": 1,
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "head",
+      "value": null,
+      "id": 30,
+      "depth": 1,
+      "children": [
+        {
+          "type": "title",
+          "value": null,
+          "id": 37,
+          "depth": 2,
+          "children": [
+            {
+              "type": "#text",
+              "value": "!AUTHOR",
+              "id": 45,
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "#text",
+          "value": "link [href=\"css/style.css\", rel=\"stylesheet\"]",
+          "id": 91,
+          "depth": 1,
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "body",
+      "value": null,
+      "id": 97,
+      "depth": 1,
+      "children": [
+        {
+          "type": "h1 [id=\"top\"]",
+          "value": null,
+          "id": 112,
+          "depth": 2,
+          "children": [
+            {
+              "type": "#text",
+              "value": "\"Welcome to \" + !AUTHOR + \"'s webpage!\"",
+              "id": 152,
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "div [class=\"menu\"]",
+          "value": null,
+          "id": 172,
+          "depth": 2,
+          "children": [
+            {
+              "type": "h2",
+              "value": null,
+              "id": 176,
+              "depth": 3,
+              "children": [
+                {
+                  "type": "#text",
+                  "value": "\"Menu\"",
+                  "id": 183,
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "ul",
+              "value": null,
+              "id": 187,
+              "depth": 3,
+              "children": [
+                {
+                  "type": "li",
+                  "value": null,
+                  "id": 191,
+                  "depth": 4,
+                  "children": [
+                    {
+                      "type": "a [href=\"about.html\"]",
+                      "value": null,
+                      "id": 214,
+                      "depth": 5,
+                      "children": [
+                        {
+                          "type": "#text",
+                          "value": "\"Learn more about \" + !AUTHOR",
+                          "id": 244,
+                          "depth": 5,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "#text",
+                      "value": "// single line comment",
+                      "id": 268,
+                      "depth": 4,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "li",
+                  "value": null,
+                  "id": 272,
+                  "depth": 4,
+                  "children": [
+                    {
+                      "type": "a [href=\"contact.html\"]",
+                      "value": null,
+                      "id": 297,
+                      "depth": 5,
+                      "children": [
+                        {
+                          "type": "#text",
+                          "value": "\"Get in contact with \" + !AUTHOR",
+                          "id": 330,
+                          "depth": 5,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "li",
+                  "value": null,
+                  "id": 335,
+                  "depth": 4,
+                  "children": [
+                    {
+                      "type": "a [href=\"#top\"]",
+                      "value": null,
+                      "id": 352,
+                      "depth": 5,
+                      "children": [
+                        {
+                          "type": "#text",
+                          "value": "\"Return to top\"",
+                          "id": 368,
+                          "depth": 5,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "script [src=\"js/script.js\"]",
+          "value": null,
+          "id": 400,
+          "depth": 2,
+          "children": []
+        },
+        {
+          "type": "button [type=\"button\", onClick=\"fireConfetti()\"]",
+          "value": null,
+          "id": 451,
+          "depth": 2,
+          "children": [
+            {
+              "type": "#text",
+              "value": "\"Click here for a surprise!\"",
+              "id": 480,
+              "depth": 2,
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

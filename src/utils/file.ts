@@ -1,4 +1,4 @@
-import { readFile } from 'fs-extra';
+import { readFile, writeFile } from 'fs-extra';
 
 export default class File {
   private fileName: string;
@@ -10,5 +10,9 @@ export default class File {
   public async read(): Promise<string> {
     const content: string = await readFile(this.fileName, 'utf-8');
     return content;
+  }
+  
+  public async write(content: string): Promise<any> {
+    await writeFile(this.fileName, content);
   }
 }
