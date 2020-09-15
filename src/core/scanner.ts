@@ -14,7 +14,7 @@ export default class Scanner {
       .join('');
   }
 
-  private writeObject(parents: string[], property: string, value: string | null = null): any {
+  private writeObject(parents: string[], property: string, value: string | null = null): null {
     if (parents.length === 0) return null;
     let tmpAst: Node = this.ast;
     parents.map((parent: string, index: number) => {
@@ -34,7 +34,7 @@ export default class Scanner {
     return null;
   }
 
-  public buildAST() {
+  public buildAST(): Node {
     let current: string = '';
     let parents: string[] = [];
     let depth: number = 0;
