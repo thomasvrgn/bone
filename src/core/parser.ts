@@ -1,6 +1,7 @@
 import { Node } from 'interfaces/node';
 import { Variable } from 'interfaces/variable';
-import Scanner from './scanner';
+import Scanner from 'core/scanner';
+import jsep from 'jsep';
 
 export default class Parser {
   private ast: Node;
@@ -44,6 +45,7 @@ export default class Parser {
     return {
       name: variableName,
       value: variableValue,
+      expressions: jsep(variableValue),
     };
   }
 
