@@ -78,7 +78,15 @@
             {
               "type": "text",
               "raw": "#text",
-              "value": "!AUTHOR",
+              "value": {
+                "type": "UnaryExpression",
+                "operator": "!",
+                "argument": {
+                  "type": "Identifier",
+                  "name": "AUTHOR"
+                },
+                "prefix": true
+              },
               "id": 71,
               "depth": 2,
               "children": []
@@ -146,7 +154,33 @@
             {
               "type": "text",
               "raw": "#text",
-              "value": "\"Welcome to \" + !AUTHOR + \"'s webpage!\"",
+              "value": {
+                "type": "BinaryExpression",
+                "operator": "+",
+                "left": {
+                  "type": "BinaryExpression",
+                  "operator": "+",
+                  "left": {
+                    "type": "Literal",
+                    "value": "Welcome to ",
+                    "raw": "\"Welcome to \""
+                  },
+                  "right": {
+                    "type": "UnaryExpression",
+                    "operator": "!",
+                    "argument": {
+                      "type": "Identifier",
+                      "name": "AUTHOR"
+                    },
+                    "prefix": true
+                  }
+                },
+                "right": {
+                  "type": "Literal",
+                  "value": "'s webpage!",
+                  "raw": "\"'s webpage!\""
+                }
+              },
               "id": 201,
               "depth": 2,
               "children": []
@@ -170,7 +204,11 @@
                 {
                   "type": "text",
                   "raw": "#text",
-                  "value": "\"Menu\"",
+                  "value": {
+                    "type": "Literal",
+                    "value": "Menu",
+                    "raw": "\"Menu\""
+                  },
                   "id": 232,
                   "depth": 3,
                   "children": []
@@ -201,7 +239,24 @@
                         {
                           "type": "text",
                           "raw": "#text",
-                          "value": "\"Learn more about \" + !AUTHOR",
+                          "value": {
+                            "type": "BinaryExpression",
+                            "operator": "+",
+                            "left": {
+                              "type": "Literal",
+                              "value": "Learn more about ",
+                              "raw": "\"Learn more about \""
+                            },
+                            "right": {
+                              "type": "UnaryExpression",
+                              "operator": "!",
+                              "argument": {
+                                "type": "Identifier",
+                                "name": "AUTHOR"
+                              },
+                              "prefix": true
+                            }
+                          },
                           "id": 293,
                           "depth": 5,
                           "children": []
@@ -209,7 +264,7 @@
                       ]
                     },
                     {
-                      "type": "text",
+                      "type": "comment",
                       "raw": "#text",
                       "value": "// single line comment",
                       "id": 317,
@@ -235,7 +290,24 @@
                         {
                           "type": "text",
                           "raw": "#text",
-                          "value": "\"Get in contact with \" + !AUTHOR",
+                          "value": {
+                            "type": "BinaryExpression",
+                            "operator": "+",
+                            "left": {
+                              "type": "Literal",
+                              "value": "Get in contact with ",
+                              "raw": "\"Get in contact with \""
+                            },
+                            "right": {
+                              "type": "UnaryExpression",
+                              "operator": "!",
+                              "argument": {
+                                "type": "Identifier",
+                                "name": "AUTHOR"
+                              },
+                              "prefix": true
+                            }
+                          },
                           "id": 379,
                           "depth": 5,
                           "children": []
@@ -261,7 +333,11 @@
                         {
                           "type": "text",
                           "raw": "#text",
-                          "value": "\"Return to top\"",
+                          "value": {
+                            "type": "Literal",
+                            "value": "Return to top",
+                            "raw": "\"Return to top\""
+                          },
                           "id": 417,
                           "depth": 5,
                           "children": []
@@ -292,7 +368,11 @@
             {
               "type": "text",
               "raw": "#text",
-              "value": "\"Click here for a surprise!\"",
+              "value": {
+                "type": "Literal",
+                "value": "Click here for a surprise!",
+                "raw": "\"Click here for a surprise!\""
+              },
               "id": 529,
               "depth": 2,
               "children": []

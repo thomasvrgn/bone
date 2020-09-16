@@ -61,6 +61,9 @@ export default class Parser {
           variable: this.parseVariables(variable),
         })
       }
+    } else if (ast.type === 'text') {
+      if (ast.value.startsWith('//')) ast.type = 'comment';
+      else ast.value = jsep(ast.value);
     }
     if (ast.type === 'block' && ast.raw === '!def') ast.type = 'definition';
     for (const child of ast.children) {
