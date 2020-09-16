@@ -9,9 +9,38 @@ export default class Parser {
     this.ast = tmpAst;
   }
 
-  private walk(ast: Node): void {
+  private parseVariables(content: string): Array<string> {
+    const informations = {
+      state: '',
+      blocks: [],
+      current: [],
+    }
+    for (const char of content) {
+      if (informations.state === 'STRING::END') informations.state = '';
+      if (char === '"') {
+        informations.current.push('"');
+        if (informations.state === 'STRING::OPEN') informations.state = 'STRING::END';
+        else informations.state = 'STRING::OPEN';
+      } else if (char === ',') {
+        if (informations.state === '') {
+          informations.blocks.push(informations.current.join(''));
+          informations.current = [];
+        }
+        else informations.current.push(char);
+      } else {
+        informations.current.push(char);
+      }
+    }
+    if (informations.current.length > 0) informations.blocks.push(informations.current.join(''))
+    return informations.blocks;
+  }
+
+  private walk(ast: Node, type?: string): void {
+    if (type === 'definition') {
+      console.log(this.parseVariables(ast.value))
+    }
     if (ast.type === 'block' && ast.raw === '!def') ast.type = 'definition';
-    for (const child of ast.children) this.walk(child);
+    for (const child of ast.children) this.walk(child, ast.type);
   }
 
   public parse(): Node {

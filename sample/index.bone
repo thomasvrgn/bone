@@ -1,11 +1,14 @@
 !def {
   AUTHOR = "Ness MC",
-  DATE = "2050"
+  DATE = "2,050"
 }
 
 head {
   title {!AUTHOR}
-  link [href="css/style.css", rel="stylesheet"]
+  link [href="css/style.css", rel="stylesheet"] {}
+  !def {
+    BRUH = "eheh"
+  }
 }
 
 body {
