@@ -12,15 +12,15 @@ head {
 }
 
 body {
-  h1 [id="top"] {"Welcome to " + !AUTHOR + "'s webpage!"}
+  h1 [id="top"] {"Welcome to " + AUTHOR + "'s webpage!"}
   div [class="menu"] {
     h2 {"Menu"}
     ul {
       li {
-        a [href="about.html"] {"Learn more about " + !AUTHOR} // single line comment
+        a [href="about.html"] {"Learn more about " + AUTHOR} // single line comment
       }
       li {
-        a [href="contact.html"] {"Get in contact with " + !AUTHOR}
+        a [href="contact.html"] {"Get in contact with " + AUTHOR}
       }
       li {
         a [href="#top"] {"Return to top"}

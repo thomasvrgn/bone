@@ -166,13 +166,8 @@
                     "raw": "\"Welcome to \""
                   },
                   "right": {
-                    "type": "UnaryExpression",
-                    "operator": "!",
-                    "argument": {
-                      "type": "Identifier",
-                      "name": "AUTHOR"
-                    },
-                    "prefix": true
+                    "type": "Identifier",
+                    "name": "AUTHOR"
                   }
                 },
                 "right": {
@@ -181,7 +176,7 @@
                   "raw": "\"'s webpage!\""
                 }
               },
-              "id": 201,
+              "id": 200,
               "depth": 2,
               "children": []
             }
@@ -191,14 +186,14 @@
           "type": "block",
           "raw": "div [class=\"menu\"]",
           "value": null,
-          "id": 221,
+          "id": 220,
           "depth": 2,
           "children": [
             {
               "type": "block",
               "raw": "h2",
               "value": null,
-              "id": 225,
+              "id": 224,
               "depth": 3,
               "children": [
                 {
@@ -209,7 +204,7 @@
                     "value": "Menu",
                     "raw": "\"Menu\""
                   },
-                  "id": 232,
+                  "id": 231,
                   "depth": 3,
                   "children": []
                 }
@@ -219,21 +214,21 @@
               "type": "block",
               "raw": "ul",
               "value": null,
-              "id": 236,
+              "id": 235,
               "depth": 3,
               "children": [
                 {
                   "type": "block",
                   "raw": "li",
                   "value": null,
-                  "id": 240,
+                  "id": 239,
                   "depth": 4,
                   "children": [
                     {
                       "type": "block",
                       "raw": "a [href=\"about.html\"]",
                       "value": null,
-                      "id": 263,
+                      "id": 262,
                       "depth": 5,
                       "children": [
                         {
@@ -248,16 +243,11 @@
                               "raw": "\"Learn more about \""
                             },
                             "right": {
-                              "type": "UnaryExpression",
-                              "operator": "!",
-                              "argument": {
-                                "type": "Identifier",
-                                "name": "AUTHOR"
-                              },
-                              "prefix": true
+                              "type": "Identifier",
+                              "name": "AUTHOR"
                             }
                           },
-                          "id": 293,
+                          "id": 291,
                           "depth": 5,
                           "children": []
                         }
@@ -267,7 +257,7 @@
                       "type": "comment",
                       "raw": "#text",
                       "value": "// single line comment",
-                      "id": 317,
+                      "id": 315,
                       "depth": 4,
                       "children": []
                     }
@@ -277,14 +267,14 @@
                   "type": "block",
                   "raw": "li",
                   "value": null,
-                  "id": 321,
+                  "id": 319,
                   "depth": 4,
                   "children": [
                     {
                       "type": "block",
                       "raw": "a [href=\"contact.html\"]",
                       "value": null,
-                      "id": 346,
+                      "id": 344,
                       "depth": 5,
                       "children": [
                         {
@@ -299,16 +289,11 @@
                               "raw": "\"Get in contact with \""
                             },
                             "right": {
-                              "type": "UnaryExpression",
-                              "operator": "!",
-                              "argument": {
-                                "type": "Identifier",
-                                "name": "AUTHOR"
-                              },
-                              "prefix": true
+                              "type": "Identifier",
+                              "name": "AUTHOR"
                             }
                           },
-                          "id": 379,
+                          "id": 376,
                           "depth": 5,
                           "children": []
                         }
@@ -320,14 +305,14 @@
                   "type": "block",
                   "raw": "li",
                   "value": null,
-                  "id": 384,
+                  "id": 381,
                   "depth": 4,
                   "children": [
                     {
                       "type": "block",
                       "raw": "a [href=\"#top\"]",
                       "value": null,
-                      "id": 401,
+                      "id": 398,
                       "depth": 5,
                       "children": [
                         {
@@ -338,7 +323,7 @@
                             "value": "Return to top",
                             "raw": "\"Return to top\""
                           },
-                          "id": 417,
+                          "id": 414,
                           "depth": 5,
                           "children": []
                         }
@@ -354,7 +339,7 @@
           "type": "block",
           "raw": "script [src=\"js/script.js\"]",
           "value": null,
-          "id": 449,
+          "id": 446,
           "depth": 2,
           "children": []
         },
@@ -362,7 +347,7 @@
           "type": "block",
           "raw": "button [type=\"button\", onClick=\"fireConfetti()\"]",
           "value": null,
-          "id": 500,
+          "id": 497,
           "depth": 2,
           "children": [
             {
@@ -373,7 +358,7 @@
                 "value": "Click here for a surprise!",
                 "raw": "\"Click here for a surprise!\""
               },
-              "id": 529,
+              "id": 526,
               "depth": 2,
               "children": []
             }
