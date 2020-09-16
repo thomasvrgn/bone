@@ -1,3 +1,5 @@
+import { Variable } from 'interfaces/variable';
+
 export interface Node {
   type?: string,
   raw?: string,
@@ -5,5 +7,5 @@ export interface Node {
   id: number,
   depth: number,
   children: Array<Node | undefined>,
-  variables?: any,
+  variables?: Variable,
 }

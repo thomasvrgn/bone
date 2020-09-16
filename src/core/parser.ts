@@ -1,4 +1,5 @@
 import { Node } from 'interfaces/node';
+import { Variable } from 'interfaces/variable';
 import Scanner from './scanner';
 
 export default class Parser {
@@ -35,12 +36,15 @@ export default class Parser {
     return informations.blocks;
   }
 
-  private parseVariables(variable: string): any {
+  private parseVariables(variable: string): Variable {
     const elements: Array<string> = variable.split('=');
     const variableName: string = elements[0].trim();
     const variableValue: string = elements.slice(1).join('=').trim();
 
-    console.log(variableName, variableValue);
+    return {
+      name: variableName,
+      value: variableValue,
+    };
   }
 
   private walk(ast: Node, type?: string): void {
