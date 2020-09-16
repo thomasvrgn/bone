@@ -52,11 +52,12 @@ export default class Parser {
   private walk(ast: Node, type?: string): void {
     if (type === 'definition') {
       for (const variable of this.splitVariables(ast.value)) {
-        console.log({
+        ast.children.push({
           type: 'variable',
           id: ast.id,
           depth: ast.depth,
           raw: variable,
+          children: [],
           variable: this.parseVariables(variable),
         })
       }

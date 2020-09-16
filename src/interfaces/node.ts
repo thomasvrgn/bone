@@ -7,5 +7,5 @@ export interface Node {
   id: number,
   depth: number,
   children: Array<Node | undefined>,
-  variables?: Variable,
+  variable?: Variable,
 }

@@ -15,7 +15,49 @@
           "value": "AUTHOR = \"Ness= MC\" + \"test\",DATE = \"2,050=\"",
           "id": 50,
           "depth": 1,
-          "children": []
+          "children": [
+            {
+              "type": "variable",
+              "id": 50,
+              "depth": 1,
+              "raw": "AUTHOR = \"Ness= MC\" + \"test\"",
+              "children": [],
+              "variable": {
+                "name": "AUTHOR",
+                "value": "\"Ness= MC\" + \"test\"",
+                "expressions": {
+                  "type": "BinaryExpression",
+                  "operator": "+",
+                  "left": {
+                    "type": "Literal",
+                    "value": "Ness= MC",
+                    "raw": "\"Ness= MC\""
+                  },
+                  "right": {
+                    "type": "Literal",
+                    "value": "test",
+                    "raw": "\"test\""
+                  }
+                }
+              }
+            },
+            {
+              "type": "variable",
+              "id": 50,
+              "depth": 1,
+              "raw": "DATE = \"2,050=\"",
+              "children": [],
+              "variable": {
+                "name": "DATE",
+                "value": "\"2,050=\"",
+                "expressions": {
+                  "type": "Literal",
+                  "value": "2,050=",
+                  "raw": "\"2,050=\""
+                }
+              }
+            }
+          ]
         }
       ]
     },
@@ -64,7 +106,24 @@
               "value": "BRUH = \"eheh\"",
               "id": 139,
               "depth": 2,
-              "children": []
+              "children": [
+                {
+                  "type": "variable",
+                  "id": 139,
+                  "depth": 2,
+                  "raw": "BRUH = \"eheh\"",
+                  "children": [],
+                  "variable": {
+                    "name": "BRUH",
+                    "value": "\"eheh\"",
+                    "expressions": {
+                      "type": "Literal",
+                      "value": "eheh",
+                      "raw": "\"eheh\""
+                    }
+                  }
+                }
+              ]
             }
           ]
         }
