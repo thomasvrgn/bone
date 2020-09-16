@@ -1,3 +1,4 @@
+import { HTML } from 'interfaces/html';
 import { Node } from 'interfaces/node';
 import Parser from './parser';
 
@@ -14,12 +15,13 @@ export default class Interpreter {
   private parseExpression (expression) {
     if (expression.type === 'BinaryExpression') {
       if (expression.operator === '+') return this.parseExpression(expression.left) + this.parseExpression(expression.right);
-      else if (expression.operator === '-')return this.parseExpression(expression.left) - this.parseExpression(expression.right);
-      else if (expression.operator === '*')return this.parseExpression(expression.left) * this.parseExpression(expression.right);
-      else if (expression.operator === '/')return this.parseExpression(expression.left) / this.parseExpression(expression.right);
+      else if (expression.operator === '-') return this.parseExpression(expression.left) - this.parseExpression(expression.right);
+      else if (expression.operator === '*') return this.parseExpression(expression.left) * this.parseExpression(expression.right);
+      else if (expression.operator === '/') return this.parseExpression(expression.left) / this.parseExpression(expression.right);
     } else {
       if (expression.type === 'Literal') return expression.value;
-      return this.stack[expression.name];
+      if (expression instanceof Object) return this.stack[expression.name];
+      return this.stack[expression];
     }
   }
 
@@ -41,6 +43,18 @@ export default class Interpreter {
             this.stack[variable.variable.name] = this.parseExpression(variable.variable.expressions);
           }
         }
+      } else if (ast.params) {
+        ast.params.map((param: HTML) => {
+          param.value.map((item: string) => {
+            if (!item.match(/%.*?%/g)) return;
+            item.match(/%.*?%/g).map((match: string) => {
+              item = item.replace(match, this.parseExpression(match.slice(1, match.length - 1)));
+              return true;
+            });
+            return true;
+          });
+          return true;
+        });
       }
     });
   }

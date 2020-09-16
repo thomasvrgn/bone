@@ -8,4 +8,5 @@ export interface Node {
   depth: number,
   children: Array<Node | undefined>,
   variable?: Variable,
+  params?: Array<object>,
 }

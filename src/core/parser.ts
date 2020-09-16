@@ -65,7 +65,27 @@ export default class Parser {
       if (ast.value.startsWith('//')) ast.type = 'comment';
       else ast.value = jsep(ast.value);
     }
-    if (ast.type === 'block' && ast.raw === '!def') ast.type = 'definition';
+    if (ast.type === 'block') {
+      if (ast.raw === '!def') {
+        ast.type = 'definition';
+      } else {
+        if (ast.raw.indexOf('[') === -1) return;
+        const parameters: Array<string> = this
+          .splitVariables(ast.raw.slice(ast.raw.indexOf('['))
+          .match(/\[.*?\]/g)
+          .map((x) => x.slice(1, x.length - 1)).join(', '))
+          .map((x) => x.trim());
+        for (const parameter of parameters) {
+          const parsedParameter = this.parseVariables(parameter).value;
+          const finalParameter = {
+            name: this.parseVariables(parameter).name,
+            value: parsedParameter.slice(1, parsedParameter.length - 1).split(/\s+/g),
+          }
+          if (!ast.params) ast.params = [];
+          ast.params.push(finalParameter);
+        }
+      }
+    }
     for (const child of ast.children) {
       if (child.depth && child.id) this.walk(child, ast.type);
     };
