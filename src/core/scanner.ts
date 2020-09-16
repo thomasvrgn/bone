@@ -4,6 +4,8 @@ export default class Scanner {
   private code: string;
 
   protected ast: Node = {
+    id: 0,
+    depth: 0,
     children: [],
   };
 

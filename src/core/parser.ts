@@ -9,7 +9,7 @@ export default class Parser {
     this.ast = tmpAst;
   }
 
-  private parseVariables(content: string): Array<string> {
+  private splitVariables(content: string): Array<string> {
     const informations = {
       state: '',
       blocks: [],
@@ -35,12 +35,30 @@ export default class Parser {
     return informations.blocks;
   }
 
+  private parseVariables(variable: string): any {
+    const elements: Array<string> = variable.split('=');
+    const variableName: string = elements[0].trim();
+    const variableValue: string = elements.slice(1).join('=').trim();
+
+    console.log(variableName, variableValue);
+  }
+
   private walk(ast: Node, type?: string): void {
     if (type === 'definition') {
-      console.log(this.parseVariables(ast.value))
+      for (const variable of this.splitVariables(ast.value)) {
+        console.log({
+          type: 'variable',
+          id: ast.id,
+          depth: ast.depth,
+          raw: variable,
+          variable: this.parseVariables(variable),
+        })
+      }
     }
     if (ast.type === 'block' && ast.raw === '!def') ast.type = 'definition';
-    for (const child of ast.children) this.walk(child, ast.type);
+    for (const child of ast.children) {
+      if (child.depth && child.id) this.walk(child, ast.type);
+    };
   }
 
   public parse(): Node {

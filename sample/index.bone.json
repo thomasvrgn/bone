@@ -1,4 +1,6 @@
 {
+  "id": 0,
+  "depth": 0,
   "children": [
     {
       "type": "definition",
@@ -10,8 +12,8 @@
         {
           "type": "text",
           "raw": "#text",
-          "value": "AUTHOR = \"Ness MC\",DATE = \"2,050\"",
-          "id": 39,
+          "value": "AUTHOR = \"Ness= MC\" + \"test\",DATE = \"2,050=\"",
+          "id": 50,
           "depth": 1,
           "children": []
         }
@@ -21,21 +23,21 @@
       "type": "block",
       "raw": "head",
       "value": null,
-      "id": 45,
+      "id": 56,
       "depth": 1,
       "children": [
         {
           "type": "block",
           "raw": "title",
           "value": null,
-          "id": 52,
+          "id": 63,
           "depth": 2,
           "children": [
             {
               "type": "text",
               "raw": "#text",
               "value": "!AUTHOR",
-              "id": 60,
+              "id": 71,
               "depth": 2,
               "children": []
             }
@@ -45,7 +47,7 @@
           "type": "block",
           "raw": "link [href=\"css/style.css\", rel=\"stylesheet\"]",
           "value": null,
-          "id": 107,
+          "id": 118,
           "depth": 2,
           "children": []
         },
@@ -53,14 +55,14 @@
           "type": "definition",
           "raw": "!def",
           "value": null,
-          "id": 114,
+          "id": 125,
           "depth": 2,
           "children": [
             {
               "type": "text",
               "raw": "#text",
               "value": "BRUH = \"eheh\"",
-              "id": 128,
+              "id": 139,
               "depth": 2,
               "children": []
             }
@@ -72,21 +74,21 @@
       "type": "block",
       "raw": "body",
       "value": null,
-      "id": 135,
+      "id": 146,
       "depth": 1,
       "children": [
         {
           "type": "block",
           "raw": "h1 [id=\"top\"]",
           "value": null,
-          "id": 150,
+          "id": 161,
           "depth": 2,
           "children": [
             {
               "type": "text",
               "raw": "#text",
               "value": "\"Welcome to \" + !AUTHOR + \"'s webpage!\"",
-              "id": 190,
+              "id": 201,
               "depth": 2,
               "children": []
             }
@@ -96,21 +98,21 @@
           "type": "block",
           "raw": "div [class=\"menu\"]",
           "value": null,
-          "id": 210,
+          "id": 221,
           "depth": 2,
           "children": [
             {
               "type": "block",
               "raw": "h2",
               "value": null,
-              "id": 214,
+              "id": 225,
               "depth": 3,
               "children": [
                 {
                   "type": "text",
                   "raw": "#text",
                   "value": "\"Menu\"",
-                  "id": 221,
+                  "id": 232,
                   "depth": 3,
                   "children": []
                 }
@@ -120,28 +122,28 @@
               "type": "block",
               "raw": "ul",
               "value": null,
-              "id": 225,
+              "id": 236,
               "depth": 3,
               "children": [
                 {
                   "type": "block",
                   "raw": "li",
                   "value": null,
-                  "id": 229,
+                  "id": 240,
                   "depth": 4,
                   "children": [
                     {
                       "type": "block",
                       "raw": "a [href=\"about.html\"]",
                       "value": null,
-                      "id": 252,
+                      "id": 263,
                       "depth": 5,
                       "children": [
                         {
                           "type": "text",
                           "raw": "#text",
                           "value": "\"Learn more about \" + !AUTHOR",
-                          "id": 282,
+                          "id": 293,
                           "depth": 5,
                           "children": []
                         }
@@ -151,7 +153,7 @@
                       "type": "text",
                       "raw": "#text",
                       "value": "// single line comment",
-                      "id": 306,
+                      "id": 317,
                       "depth": 4,
                       "children": []
                     }
@@ -161,21 +163,21 @@
                   "type": "block",
                   "raw": "li",
                   "value": null,
-                  "id": 310,
+                  "id": 321,
                   "depth": 4,
                   "children": [
                     {
                       "type": "block",
                       "raw": "a [href=\"contact.html\"]",
                       "value": null,
-                      "id": 335,
+                      "id": 346,
                       "depth": 5,
                       "children": [
                         {
                           "type": "text",
                           "raw": "#text",
                           "value": "\"Get in contact with \" + !AUTHOR",
-                          "id": 368,
+                          "id": 379,
                           "depth": 5,
                           "children": []
                         }
@@ -187,21 +189,21 @@
                   "type": "block",
                   "raw": "li",
                   "value": null,
-                  "id": 373,
+                  "id": 384,
                   "depth": 4,
                   "children": [
                     {
                       "type": "block",
                       "raw": "a [href=\"#top\"]",
                       "value": null,
-                      "id": 390,
+                      "id": 401,
                       "depth": 5,
                       "children": [
                         {
                           "type": "text",
                           "raw": "#text",
                           "value": "\"Return to top\"",
-                          "id": 406,
+                          "id": 417,
                           "depth": 5,
                           "children": []
                         }
@@ -217,7 +219,7 @@
           "type": "block",
           "raw": "script [src=\"js/script.js\"]",
           "value": null,
-          "id": 438,
+          "id": 449,
           "depth": 2,
           "children": []
         },
@@ -225,14 +227,14 @@
           "type": "block",
           "raw": "button [type=\"button\", onClick=\"fireConfetti()\"]",
           "value": null,
-          "id": 489,
+          "id": 500,
           "depth": 2,
           "children": [
             {
               "type": "text",
               "raw": "#text",
               "value": "\"Click here for a surprise!\"",
-              "id": 518,
+              "id": 529,
               "depth": 2,
               "children": []
             }
