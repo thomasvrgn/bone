@@ -1,0 +1,7 @@
+!def {
+  author = 5
+}
+
+p {
+  5 + 3 + author
+}

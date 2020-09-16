@@ -9,8 +9,17 @@ export default class Interpreter {
     this.ast = tmpParser.parse();
   }
 
+  private walkAST(ast: Node, type: string, callback: Function) {
+    callback(ast, type);
+    for (const child of ast.children) {
+      if (child.depth && child.id) this.walkAST(child, ast.type, callback);
+    };
+  }
+
   public transform() {
-    console.log(this.ast);
+    this.walkAST(this.ast, '', (ast, type) => {
+      console.log(type)
+    });
   }
 
 }

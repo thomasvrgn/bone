@@ -3,7 +3,7 @@ import File from 'utils/file';
 // import jsep from 'jsep';
 
 async function main() {
-  const content: string = await new File('./sample/index.bone').read();
+  const content: string = await new File('./sample/variables.bone').read();
   const interpreted = new Interpreter(content);
   console.log(interpreted.transform());
 }
