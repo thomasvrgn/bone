@@ -14,14 +14,15 @@ export default class Scanner {
       .join('');
   }
 
-  private writeObject(parents: string[], property: string, value: string | null = null): null | number {
+  private writeObject(parents: string[], property: string, value: string | null = null, type: string): null | number {
     if (parents.length === 0) return null;
     let tmpAst: Node = this.ast;
     for (const index in parents) {
       const parent = parents[index]
       if (parseInt(index) + 1 === parents.length) {
         return tmpAst.children.push({
-          type: property.split(/:/)[0],
+          type,
+          raw: property.split(/:/)[0],
           value,
           id: Number(property.split(/:/)[1]),
           depth: Number(property.split(/:/)[2]),
@@ -44,11 +45,11 @@ export default class Scanner {
       if (char === '{') {
         ++depth;
         parents.push(current.trim() + ':' + index + ':' + depth);
-        this.writeObject(parents, current.trim() + ':' + index + ':' + depth);
+        this.writeObject(parents, current.trim() + ':' + index + ':' + depth, null, 'block');
         current = '';
       } else if (char === '}') {
         if (current.trim().length > 0) {
-          this.writeObject([...parents, ''], '#text:' + index + ':' + depth, current.trim());
+          this.writeObject([...parents, ''], '#text:' + index + ':' + depth, current.trim(), 'text');
         }
         --depth;
         parents = parents.slice(0, depth);

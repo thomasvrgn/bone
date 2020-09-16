@@ -1,5 +1,6 @@
 !def {
-  AUTHOR = "Ness MC"
+  AUTHOR = "Ness MC",
+  DATE = "2050"
 }
 
 head {
