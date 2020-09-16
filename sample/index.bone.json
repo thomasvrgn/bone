@@ -1,7 +1,7 @@
 {
   "children": [
     {
-      "type": "block",
+      "type": "definition",
       "raw": "!def",
       "value": null,
       "id": 5,

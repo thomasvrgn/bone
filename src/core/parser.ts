@@ -9,7 +9,8 @@ export default class Parser {
     this.ast = tmpAst;
   }
 
-  private walk(ast: Node) {
+  private walk(ast: Node): void {
+    if (ast.type === 'block' && ast.raw === '!def') ast.type = 'definition';
     for (const child of ast.children) this.walk(child);
   }
 
