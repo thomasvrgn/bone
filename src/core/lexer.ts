@@ -4,3 +4,8 @@ export enum Tokens {
   String = 'String',
   Bracket = 'Bracket',
 }
+
+export interface Token {
+  token: Tokens,
+  value: string,
+}
