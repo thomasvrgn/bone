@@ -12,7 +12,6 @@
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/NessMC/bone.svg)](https://github.com/NessMC/bone/pulls)
 [![License](https://img.shields.io/badge/license-Creative%20commons-blue.svg)](/LICENSE)
 [![BCH compliance](https://bettercodehub.com/edge/badge/NessMC/bone?branch=master)](https://bettercodehub.com/)
-[![Discord](https://discordapp.com/api/guilds/738827425043185717/widget.png?style=shield)]()
  
 </div>
 
