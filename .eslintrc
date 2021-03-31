@@ -12,6 +12,7 @@
     "spaced-comment": "off",
     "linebreak-style": "off",
     "no-restricted-syntax":["error", "LabeledStatement", "WithStatement"],
-    "no-console": "off"
+    "no-console": "off",
+    "import/prefer-default-export": "off"
   }
 }
