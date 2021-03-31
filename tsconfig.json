@@ -19,16 +19,16 @@
     "esModuleInterop": true,
     "baseUrl": ".",
     "paths": {
-      "core/*": [
+      "@core/*": [
         "./src/core/*"
       ],
-      "interfaces/*": [
+      "@interfaces/*": [
         "./src/interfaces/*"
       ],
-      "utils/*": [
+      "@utils/*": [
         "./src/utils/*"
       ],
-      "tests/*": [
+      "@tests/*": [
         "./tests/*"
       ]
     }
