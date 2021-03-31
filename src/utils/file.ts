@@ -1,7 +1,7 @@
 import { readFile, writeFile } from 'fs-extra';
 
-export default class File {
-  private fileName: string;
+export class File {
+  private readonly fileName: string;
 
   constructor(fileName: string) {
     this.fileName = fileName;
