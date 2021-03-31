@@ -14,8 +14,8 @@ export class Lexer {
   private static formatSource(source: string): string {
     return source
       .split(/\r?\n/g)
-      .map(line => line.trim())
-      .filter(line => line.length > 0)
+      .map((line) => line.trim())
+      .filter((line) => line.length > 0)
       .join('');
   }
 
