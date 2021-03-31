@@ -10,6 +10,8 @@
   "rules": {
     "eol-last": "off",
     "spaced-comment": "off",
-    "linebreak-style": "off"
+    "linebreak-style": "off",
+    "no-restricted-syntax":["error", "LabeledStatement", "WithStatement"],
+    "no-console": "off"
   }
 }
