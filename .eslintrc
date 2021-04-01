@@ -8,6 +8,7 @@
     "project": "./tsconfig.json"
   },
   "rules": {
+    "lines-between-class-members": "off",
     "eol-last": "off",
     "spaced-comment": "off",
     "linebreak-style": "off",
